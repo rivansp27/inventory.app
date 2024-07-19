@@ -19,7 +19,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="id_penerima" class="form-label">ID Penerima</label>
-                            <input type="text" class="form-control" id="id_penerima" name="id_penerima" required>
+                            <input type="text" class="form-control" id="id_penerimaan" name="id_penerimaan" required>
                         </div>
                         <div class="mb-3">
                             <label for="tgl_penyimpanan" class="form-label">Tanggal Penyimpanan</label>

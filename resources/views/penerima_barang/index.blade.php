@@ -1,3 +1,5 @@
+@extends('home')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +33,15 @@
                         <tbody>
                             @forelse($penerima_barang as $item)
                                 <tr>
-                                    <td>{{ $item->id_penerima }}</td>
+                                    <td>{{ $item->id_penerimaan }}</td>
                                     <td>{{ $item->tgl_penyimpanan }}</td>
                                     <td>{{ $item->alamat }}</td>
                                     <td>{{ $item->kode_barang }}</td>
                                     <td>{{ $item->kuantity }}</td>
                                     <td>
-                                        <a href="{{ route('penerima_barang.show', $item->id_penerima) }}" class="btn btn-info btn-sm">Detail</a>
-                                        <a href="{{ route('penerima_barang.edit', $item->id_penerima) }}" class="btn btn-primary btn-sm">Edit</a>
-                                        <form action="{{ route('penerima_barang.destroy', $item->id_penerima) }}" method="POST" class="d-inline">
+                                        <a href="{{ route('penerima_barang.show', $item->id_penerimaan) }}" class="btn btn-info btn-sm">Detail</a>
+                                        <a href="{{ route('penerima_barang.edit', $item->id_penerimaan) }}" class="btn btn-primary btn-sm">Edit</a>
+                                        <form action="{{ route('penerima_barang.destroy', $item->id_penerimaan) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus penerima barang ini?')">Hapus</button>
@@ -60,3 +62,4 @@
 </div>
 </body>
 </html>
+@endsection

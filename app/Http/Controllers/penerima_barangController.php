@@ -24,11 +24,11 @@ class penerima_barangController extends Controller
     {
         // Validasi input dari form
         $request->validate([
-            'id_penerima' => 'required|unique:penerima_barang,id_penerima',
+            'id_penerimaan' => 'required|unique:penerima_barang,id_penerimaan',
             'tgl_penyimpanan' => 'required|date',
             'alamat' => 'required',
             'kode_barang' => 'required',
-            'kuantity' => 'required',
+            'kuantity' => 'required|numeric',
             
         ]);
 
